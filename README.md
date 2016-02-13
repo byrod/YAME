@@ -1,4 +1,4 @@
 # YAME
-YAME - Yet Another Mod Enabler
+Yet Another Mod Enabler
 
-yame.byrod.fr
+http://yame.byrod.fr
