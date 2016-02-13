@@ -1,0 +1,33 @@
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\abomination\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\abomination\abomination.info.darkest	6BE2EC5CD25C6E4CBC3617075280A6D328E61092
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\arbalest\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\arbalest\arbalest.info.darkest	E8898BBF5C94B509CE5DFA53B6F386F7BF0EEA4E
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\bounty_hunter\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\bounty_hunter\bounty_hunter.info.darkest	FD1142F45052B9133CA354ECB773E14D4A3E4549
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\crusader\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\crusader\crusader.info.darkest	21C302526CA87E003C8BCD369562066C6010FC0A
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\grave_robber\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\grave_robber\grave_robber.info.darkest	572E656E147F44D21299D88CD810BE0F4A87FA89
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\hellion\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\hellion\hellion.info.darkest	41EF3ED59777FAA6E1E74356064056A754B71881
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\highwayman\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\highwayman\highwayman.info.darkest	92863CA857AFF2E69174C25821597EA0DA62A8A6
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\houndmaster\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\houndmaster\houndmaster.info.darkest	AD557E9DAE897F19B4B5D988D0DFEA883821DECD
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\jester\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\jester\jester.info.darkest	B8F04870CB4EC96E6CC0FCA63E4E5CFC322E9B63
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\leper\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\leper\leper.info.darkest	68255A7FE01E6A0CF81F4ADAE60440EA6D5CEF1F
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\man_at_arms\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\man_at_arms\man_at_arms.info.darkest	39C1E4A1AF04DEA9B094129E01A56EF593DEF12C
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\occultist\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\occultist\occultist.info.darkest	D79F64087742C188BC9F7E1520A0AF41F7DC5C19
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\plague_doctor\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\plague_doctor\plague_doctor.info.darkest	51AAA646322CCEC97DEC5BE4E6F513A261A607D4
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\vestal\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\heroes\vestal\vestal.info.darkest	C7EBB11742B921061DE7F80144F43A1E3C3F5651
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\plugins\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\plugins\file1.lua	D73EF92426F2B11DFC4AED4D4BFC41C49EE1087C
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\plugins\folder1\
+C:\Users\gs0760\Documents\SharpDevelop Projects\YAME v1.2.3\YAME\bin\Debug\plugins\folder1\folder1file1.lua	D73EF92426F2B11DFC4AED4D4BFC41C49EE1087C
