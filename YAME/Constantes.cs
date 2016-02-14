@@ -19,8 +19,9 @@ namespace YAME
         private const string snapshotfilename = "YAME Game Snapshot.txt";
         private const string version = "Yet Another Mod Enabler - v";
         private const string newmodfolder = "My New Mod Folder";
-        private const string helpurl = "http://yame.byrod.fr/";
-        private const string updateurl = "http://yame.byrod.fr/download/";
+        private const string helpurl = "http://www.yoururl.here/";
+        private const string updateurl = "http://www.yoururl.here/update/";
+        private const string updatefilename = "update.txt";
 
 
         public Constantes()
@@ -136,6 +137,14 @@ namespace YAME
             get
             {
                 return updateurl;
+            }
+        }
+
+        public string Updatefilename
+        {
+            get
+            {
+                return updatefilename;
             }
         }
     }

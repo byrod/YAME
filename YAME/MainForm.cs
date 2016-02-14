@@ -1586,17 +1586,14 @@ namespace YAME
         private void toolStripMenuUpdate_Click(object sender, EventArgs e)
         {
 
-            string currentVersionUrlTxt = _YameConst.Updateurl + "update.txt";
+            string currentVersionUrlTxt = _YameConst.Updateurl + _YameConst.Updatefilename;
 
             using (var client = new MyClient())
             {
-                string contentVersion = client.DownloadString(currentVersionUrlTxt);
+                string updateversion = client.DownloadString(currentVersionUrlTxt);
 
-                if (String.Empty != contentVersion)
+                if (String.Empty != updateversion)
                 {
-                    var contentVersionSplit = contentVersion.Split('=');
-                    var updateversion = contentVersionSplit[1].Trim();
-
                     Version assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                     string currentVersion = assemblyVersion.Major.ToString() + assemblyVersion.Minor.ToString() + assemblyVersion.Build.ToString();
                     string updateVersionFileUrl = _YameConst.Updateurl + _YameConst.Appname + "_" + updateversion + ".zip";
@@ -1604,27 +1601,15 @@ namespace YAME
 
                     if (updateversion != currentVersion)
                     {
-                        MessageBox.Show("Update " + updateversion + " available !");
-                        System.Diagnostics.Process.Start(_YameConst.Helpurl + "#download");
+                        string message = "Update " + updateversion + " available !\r\n" + "\r\nVisit website for download ?";
+                        DialogResult result = SMARTDIALOG.SmartDialog.Show(message, "V" + currentVersion, "Server found.", "Update found", "NO", "YES");
+                        if(result == DialogResult.No) // Inverted button on frame ;)
+                            System.Diagnostics.Process.Start(_YameConst.Helpurl + "#download");
                     }
-                        
                     else
-                        MessageBox.Show("Version " + currentVersion + " is up to date !");
-
-                    try
                     {
-                        HttpWebRequest request = WebRequest.Create(updateVersionFileUrl) as HttpWebRequest;
-                        //Setting the Request method HEAD, you can also use GET too.
-                        request.Method = "GET";
-                        HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-                        response.Close();
-                        //return (response.StatusCode == HttpStatusCode.OK);
+                        SMARTDIALOG.SmartDialog.Show("Current version is up to date !", "V"+currentVersion, "Server found.", "No update found", "OK");
                     }
-                    catch
-                    {
-                        //Any exception will returns false.
-                    }
-
 
                 }
                 else
@@ -1661,6 +1646,20 @@ namespace YAME
 		{
 			var result1 = AboutForm.Show(_YameConst.Version);
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

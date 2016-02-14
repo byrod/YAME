@@ -22,7 +22,7 @@
     <SourceAnalysisOverrideSettingsFile>C:\Users\gs0760\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NoWin32Manifest>False</NoWin32Manifest>
-    <PublishUrl>C:\Users\Fabrice\Source\Repos\YAME\</PublishUrl>
+    <PublishUrl>publier\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -32,7 +32,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.2.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -84,7 +84,7 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -157,6 +157,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SENDTOTRASH\SHFILEOP.cs" />
+    <Compile Include="SMARTDIALOG\SmartDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMARTDIALOG\SmartDialog.Designer.cs">
+      <DependentUpon>SmartDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="SnapshotForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMARTDIALOG\SmartDialog.resx">
+      <DependentUpon>SmartDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SnapshotForm.resx">
       <DependentUpon>SnapshotForm.cs</DependentUpon>
@@ -217,6 +226,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "Release" copy "$(TargetPath)" "D:\Donnees\Bureau\Yame"
