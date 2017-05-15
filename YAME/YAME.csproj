@@ -95,6 +95,9 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
@@ -229,7 +232,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if "$(ConfigurationName)" == "Release" copy "$(TargetPath)" "D:\Donnees\Bureau\Yame"
+    <PostBuildEvent>if "$(ConfigurationName)" == "Release" copy "$(TargetPath)" "C:\Users\fabro\Desktop\Yame"
 REM if "$(ConfigurationName)" == "Release" copy "$(TargetPath)" "C:\Users\gs0760\Mes programmes\YAME"</PostBuildEvent>
   </PropertyGroup>
 </Project>

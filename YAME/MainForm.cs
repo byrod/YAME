@@ -29,6 +29,7 @@ namespace YAME
         
         public string _SelectedMod;
         public int _SelectedIndexMod;
+        public int _InvalidModCount;
         
         public string _ContentSnapshot = "";
 
@@ -89,23 +90,7 @@ namespace YAME
 
             try
             {
-                string[] dirs = Directory.GetDirectories(_AbsModFolder);
-
-                foreach (string dir in dirs)
-                {
-                    // Don't list hidden directory
-                    DirectoryInfo directory = new DirectoryInfo(dir);
-                    if ((directory.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden)
-                    {
-                        String[] modname = dir.Split('\\');
-
-                        // if mod not in activatedModsList add to listBoxModfound
-                        if (!_ActivatedModsList.Any(mod => mod.ModName == modname[modname.Length - 1]))
-                        {
-                            listBoxModFound.Items.Add(modname[modname.Length - 1]);
-                        }
-                    }
-                }
+                buttonRefresh.PerformClick();
 
                 if (_TotalModActivated > 0)  // otherwise add to listBoxModActivated
                     foreach (ModObject mod in _ActivatedModsList)
@@ -114,6 +99,7 @@ namespace YAME
                     }
 
                 modsCalculate(true);
+                _InvalidModCount = 0;
                 buttonModPlus.Enabled = false;
                 buttonModPlus.BackgroundImage = Properties.Resources.ButtonPlus_d;
                 buttonModMoins.Enabled = false;
@@ -510,6 +496,7 @@ namespace YAME
             try
             {
                 string[] dirs = Directory.GetDirectories(_AbsModFolder);
+                _InvalidModCount = 0;
 
                 foreach (string dir in dirs)
                 {
@@ -519,15 +506,25 @@ namespace YAME
                     {
                         String[] modname = dir.Split('\\');
 
-                        // if mod not in activatedModsList add to listBoxModfound
-                        if (!_ActivatedModsList.Any(mod => mod.ModName == modname[modname.Length - 1]))
+                        // If bracket in directory name don't list it
+                        var start = modname[modname.Length - 1].IndexOf('[');
+                        var end = modname[modname.Length - 1].LastIndexOf(']');
+                        bool invalidMod = false;
+                        if (start > 0 && end > 0)
+                        {
+                            invalidMod = true;
+                            _InvalidModCount++;
+                        }
+                            
+                        // if mod not in activatedModsList and not invalidMod add to listBoxModfound
+                        if (!_ActivatedModsList.Any(mod => mod.ModName == modname[modname.Length - 1]) && !invalidMod)                            
                         {
                             listBoxModFound.Items.Add(modname[modname.Length - 1]);
                         }
                     }
                 }
-
-                modsCalculate(true);
+                
+                modsCalculate(true);                
             }
             catch (Exception)
             {
@@ -541,12 +538,16 @@ namespace YAME
 
         private void modsCalculate(bool init)
         {
+            String invalidModLabel = "";
             if (init)
             {
                 _TotalModFound = listBoxModFound.Items.Count;
                 _TotalModFound += listBoxModActivated.Items.Count;
             }
-            labelModFindAndActivated.Text = _TotalModFound + " mods found (" + listBoxModActivated.Items.Count + " activated)";
+            if (_InvalidModCount>0) {
+                invalidModLabel = " [" + _InvalidModCount + " ignored cause of brackets in folder name] ";
+            }
+            labelModFindAndActivated.Text = _TotalModFound + " mods found (" + listBoxModActivated.Items.Count + " activated)" + invalidModLabel;
         }
         
         private void loadModsFromIni()
